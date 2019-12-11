@@ -11,6 +11,7 @@ Work proceeding:
 Use the following code to:
 4. Parse the genotype
 5. Build dataset in form of dataframe
+6. Add label
 '''
 
 #library
@@ -50,6 +51,25 @@ def create_dataset():
     
     return dataset
 
+#A function to add label
+def add_label(dataset):
+    label = []
+    for i in range (49):
+        if i < 9:
+            word = 'Achidophile'
+        if i>8 and i<22:
+            word = 'Alkaliphile'
+        if i>21 and i<35:
+            word = 'Halophile'
+        if i>35 :
+            word = "Thermophile"
+        label.append(word)
+    
+    #add column label to the dataset
+    dataset['Label'] = label
+    
+    return dataset
 #----------------------------------------------------------
 #Running the script
 dataset = create_dataset()
+dataset = add_label(dataset)
