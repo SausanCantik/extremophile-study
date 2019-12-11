@@ -1,5 +1,5 @@
 '''
-A script generate dataset from selected column in sequence alignment
+A script to generate dataset from selected column in sequence alignment
 design by.https://github.com/SausanCantik
 
 Work proceeding:
@@ -73,3 +73,5 @@ def add_label(dataset):
 #Running the script
 dataset = create_dataset()
 dataset = add_label(dataset)
+#creating output file
+dataset.to_excel('extremophile_dataset.xlsx')
