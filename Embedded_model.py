@@ -1,5 +1,5 @@
 '''
-A script to perform chi squeare based feature selection
+A script to perform MNB classifier
 design by.https://github.com/SausanCantik
 
 Use the following code to:
